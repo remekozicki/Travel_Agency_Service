@@ -1,0 +1,17 @@
+<form action="" [formGroup]="signUpForm">
+    <div class="box">
+        <label for="">emali</label>
+        <input type="text" name="email" formControlName="email">
+    </div>
+    <div class="box">
+        <label for="">hasło</label>
+        <input type="text" name="password" formControlName="password">
+    </div>
+    <div class="box">
+        <label for="">nazwa</label>
+        <input type="text" name="userName" formControlName="userName">
+    </div>
+    <button [ngClass]="signUpForm.valid ? 'buton': 'butonInValid'"(click)="createUser()" [disabled]="!signUpForm.valid">create user</button>
+    <a class="buton" routerLink="/signIn"  routerLinkActive="active">go to login</a>
+
+</form>

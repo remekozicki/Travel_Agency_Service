@@ -1,0 +1,164 @@
+{
+    "TripsBase":{
+    "key0":{
+        "id":0,
+        "name": "Rajskie-lulu",
+        "destiny":"Hawaje",
+        "startDate":"2022-07-26",
+        "endDate":"2022-08-09",
+        "pricePerPerson":450,
+        "maxPeople":12,
+        "description":"Honolulu is the largest city in the state of Hawaii and also home to the State Capitol. Honolulu, which means sheltered harbor or protected bay.",
+        "img":"assets/images/honolulu_img.jpg",
+        "link":"assets/images/honolulu_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key1":{
+        "id":1,
+
+        "name": "Śladami Mundialu",
+        "destiny":"Qatar",
+        "startDate":"2022-11-30",
+        "endDate":"2022-12-10",
+        "pricePerPerson":230,
+        "maxPeople":40,
+        "description":"The State of Qatar is a sovereign and independent state in the Middle East, occupying a peninsula that juts into the Arabian Gulf.",
+        "img":"assets/images/qatar_img.jpg",
+        "link":"assets/images/qatar_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key2":{
+        "id":2,
+        "name": "Pieczara Smoka",
+        "destiny":"Polska",
+        "startDate":"2022-04-29",
+        "endDate":"2022-05-06",
+        "pricePerPerson":180,
+        "maxPeople":15,
+        "description":"Kraków also Krakow, or Cracow, is the second largest and one of the oldest city in Poland, situated on the Wisla River in the Malopolska region. The city dates back to the 7th century.",
+        "img":"assets/images/kraków_img.jpg",
+        "link":"assets/images/kraków_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key3":{
+        "id":3,
+        "name": "Oktoberfest",
+        "destiny":"Niemcy",
+        "startDate":"2022-09-20",
+        "endDate":"2022-10-03",
+        "pricePerPerson":300,
+        "maxPeople":30,
+        "description":"Munich is the capital and largest city of the German state of Bavaria, on the banks of the River Isar, north of the Bavarian Alps. Munich is the third largest city in Germany, after Berlin and Hamburg.",
+        "img":"assets/images/monachium_img.jpg",
+        "link":"assets/images/monachium_link.jpg",
+        "booked":0,
+        "rating":0
+
+    },
+    "key4":{
+        "id":4,
+        "name": "Weekend w Pradze",
+        "destiny":"Czechy",
+        "startDate":"2022-06-03",
+        "endDate":"2022-06-06",
+        "pricePerPerson":150,
+        "maxPeople":16,
+        "description":"Prague is the capital and the largest city of the Czech Republic situated in the middle of Bohemia on the Vltava River. It took the city eleven centuries to get the look we know today.",
+        "img":"assets/images/praga_img.jpg",
+        "link":"assets/images/praga_img.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key5":{
+        "id":5,
+        "name": "Kwitnąca Wiśnia",
+        "destiny":"Japonia",
+        "startDate":"2022-07-15",
+        "endDate":"2022-08-03",
+        "pricePerPerson":2325,
+        "maxPeople":8,
+        "description":"Tokyo is the centre of Japan. Attractions include the Imperial Palace, encircled by stone-walled moats and broad gardens, and numerous temples and shrines.",
+        "img":"assets/images/tokio_img.jpg",
+        "link":"assets/images/tokio_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key6":{
+        "id":6,
+        "name": "Londinium",
+        "destiny":"Anglia",
+        "startDate":"2022-09-09",
+        "endDate":"2022-09-15",
+        "pricePerPerson":325,
+        "maxPeople":14,
+        "description":"London is the capital city of the United Kingdom. It is the U.K.'s largest metropolis and its economic, transportation, and cultural centre. London is also among the oldest of the world's great cities.",
+        "img":"assets/images/londyn_img.jpg",
+        "link":"assets/images/londyn_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key7":{
+        "id":7,
+        "name": "Raj na Ziemi",
+        "destiny":"Malediwy",
+        "startDate":"2022-07-10",
+        "endDate":"2022-07-25",
+        "pricePerPerson":1525,
+        "maxPeople":14,
+        "description":"The Maldives consists of 1,190 islands located in the Indian Ocean, southwest of India. They offer seclusion, breathtaking ocean views, and the most luxurious overwater villas in the World.",
+        "img":"assets/images/malediwy_img.jpg",
+        "link":"assets/images/malediwy_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key8":{
+        "id":8,
+        "name": "Miasto Aniołów",
+        "destiny":"USA",
+        "startDate":"2022-08-08",
+        "endDate":"2022-08-16",
+        "pricePerPerson":1750,
+        "maxPeople":10,
+        "description":"Los Angeles is the commercial, financial, and cultural center of Southern California. Los Angeles is known for its Mediterranean climate, Hollywood film industry, and sprawling metropolitan area.",
+        "img":"assets/images/los_angeles_img.jpg",
+        "link":"assets/images/los_angeles_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    },
+    "key9":{
+        "id":9,
+        "name": "Croissant",
+        "destiny":"Francja",
+        "startDate":"2022-08-05",
+        "endDate":"2022-08-10",
+        "pricePerPerson":500,
+        "maxPeople":14,
+        "description":"Paris is one of the most beautiful cities in the world. It is known worldwide for the Louvre Museum, Notre-Dame cathedral, and the Eiffel tower. It has a reputation of being a romantic and cultural city.",
+        "img":"assets/images/paryz_img.jpg",
+        "link":"assets/images/paryz_link.jpg",
+        "booked":0,
+        "rating":0
+
+
+    }
+    }
+}

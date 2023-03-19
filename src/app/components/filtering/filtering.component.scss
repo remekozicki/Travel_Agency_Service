@@ -1,0 +1,64 @@
+
+
+.wrapper{
+    position: relative;
+    top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    width: 300px;
+    height: 700px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    p{
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .countrySearch{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        select{
+            height: 30px;
+            width: 200px;
+            text-align: center;
+            font-size: 18px;
+            border: none;
+            background-color: rgb(0, 204, 255);
+            color: white;
+            border-radius: 5px;
+        }
+    }
+    .priceSearch{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        
+    }
+
+    .dataSearch{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .ratingSearch{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+
+.uncheckedStar{
+    filter: grayscale(100%);
+}
+.checkedStar{
+    filter: grayscale(0%);
+}
+
+.uncheckedStar:hover{
+    filter: grayscale(0%);
+}

@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="navBox">
+        <components-navgation-menu></components-navgation-menu>
+
+    </div>
+    <div class="menuBox" >
+        <ng-container>
+            <a [ngClass]="{'over10' : cartService.getCart().length> 10,
+                'under10' : cartService.getCart().length <= 10}" routerLink="/shopingCart" routerLinkActive="active" class="shoppingCart">
+                <img src="https://img.icons8.com/ios-glyphs/60/null/shopping-cart--v1.png"/>
+                <p>Koszyk: {{cartService.getCart().length}}</p>
+                <p>Łączna cena: ${{cartService.sumCost()}}</p>
+            </a>
+        </ng-container>
+        
+    </div>
+    <router-outlet></router-outlet>
+</div>
+

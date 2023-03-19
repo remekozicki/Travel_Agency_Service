@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <Header>
+        <h1>Tam i z Powrotem</h1>
+    </Header>
+    <nav class="menuWrapper">
+        <a routerLink="/homepage" routerLinkActive="active" href="" class="menuButton homePage">Główna</a>
+        <a routerLink="/tripsOffer" routerLinkActive="active" class="menuButton tripsOffer">Oferta</a>
+        <a [routerLink]=" 
+        this.auth.userRoles.admin == true? ['/adminDashboard'] :
+        this.auth.userRoles.menager == true? ['/menagerDashboard'] :
+        this.auth.userRoles.banned == true? ['/bannedDashboard'] :
+        this.auth.userRoles.client == true? ['/clientDashboard'] :
+        this.auth.userRoles.guest == true? ['/guestDashboard'] :
+        ['/dashboard']"
+         routerLinkActive="active" > Dashboard</a>
+        <a  class="menuButton comntact"> Contact</a>
+    </nav>
+    <div class="profileBox">
+        <a routerLink="/myPofile" routerLinkActive="active" class="account">
+            <img src="https://img.icons8.com/pastel-glyph/60/null/user-male-circle.png"/>
+            <div class="tripToBe">4</div>
+    
+        </a>
+        
+        <p>{{getNick()}}</p>
+        <div class="logBox">
+            <a class="log" routerLink="/signIn" routerLinkActive="active">login</a>
+            <a class="log" (click)="onLogout()">logout</a>
+
+        </div>
+
+    </div>
+
+</div>

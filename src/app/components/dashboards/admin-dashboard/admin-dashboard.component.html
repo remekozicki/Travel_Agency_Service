@@ -1,0 +1,18 @@
+<div class="info">
+    <h1>Users List</h1>
+    <ng-container *ngFor="let user of users">
+        <div class="user">
+
+            <p>{{user.userName}}</p>
+            <p>{{user.email}}</p>
+            <p>admin:{{user.roles.admin}}</p>
+            <p>menage:{{user.roles.menager}}</p>
+            <p>client:{{user.roles.client}}</p>
+            <p>banned:{{user.roles.banned}}</p>
+            <p>guest:{{user.roles.guest}}</p>
+        </div>
+        
+
+    </ng-container>
+
+</div>

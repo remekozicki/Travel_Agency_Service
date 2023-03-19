@@ -1,0 +1,10 @@
+<div class="starsBox">
+    <div class="stars">
+        <img (click)="rateWithStar(1)" [ngClass]="{'checkedStar': changeArr[0] === true, 'uncheckedStar': changeArr[0] === false}" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+        <img (click)="rateWithStar(2)" [ngClass]="{'checkedStar': changeArr[1] === true, 'uncheckedStar': changeArr[1] === false}" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+        <img (click)="rateWithStar(3)" [ngClass]="{'checkedStar': changeArr[2] === true, 'uncheckedStar': changeArr[2] === false}" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+        <img (click)="rateWithStar(4)" [ngClass]="{'checkedStar': changeArr[3] === true, 'uncheckedStar': changeArr[3] === false}" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+        <img (click)="rateWithStar(5)" [ngClass]="{'checkedStar': changeArr[4] === true, 'uncheckedStar': changeArr[4] === false}" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+    </div>
+    <p>Twoja ocena: {{yourRating}}</p>
+</div>

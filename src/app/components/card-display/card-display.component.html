@@ -1,0 +1,73 @@
+
+<!-- <app-shopping-cart [summary]="summary" [cartArray]="cartArray" [allBooked] = "allBooked"></app-shopping-cart> -->
+<aside class="filters">
+    <app-filtering [maxPrice]="highestCost" [minPrice]="lowestCost" [Trips]="trips" (filtersEmitter)="changeFilters($event)"></app-filtering>
+</aside>
+<div class="wrapper">
+    <div class="mainBox">
+        <ng-container *ngFor="let item of trips | filter:filters ; let i=index ">
+            <div class="cardBox"
+            [ngStyle]="{'border': item.pricePerPerson == highestCost? '5px solid rgba(4, 255, 4, 0.4)' 
+            : (item.pricePerPerson == lowestCost? '5px solid rgba(255, 0, 0, 0.4)' 
+            : null)}" 
+            
+            [ngClass]="{'fourleft': item.maxPeople <= 4, 
+            'twoleft': item.maxPeople <= 2,
+            'zeroleft': item.maxPeople == 0}"
+            >
+                <a href="" routerLink="/singleTrip/{{item.id}}" routerLinkActive="active">
+                    <img src='{{item.img}}' alt="">
+                </a>
+                <h1 class="title">{{item.name}}</h1>
+                <div class="destiny">
+                    <h2>{{item.destiny}}</h2>
+                </div>
+                <div class="date">
+                    <p class="startDate">od: {{item.startDate}} do: {{item.endDate}}</p>
+                </div>
+                <div class="priceBox">
+                    <p class="pricePrePreson">Cena: ${{item.pricePerPerson}}</p>
+                </div>
+                <div class="placeBox" >
+                    <p class="maxPeople">Wolne miejsca: {{item.maxPeople - cartService.howManyInCart(item)}} </p>
+                    <div class="btns">
+                        <button [disabled]="disablePlus(item)" (click)="book(item)" (click)="maxMinPrice()" class="add" >+</button>
+                        <button [disabled]="disableMinus(item)" (click)="unbook(item)" (click)="maxMinPrice()" class="delete">-</button>
+                    </div> 
+                </div>
+                <div class="stars">
+                    <img [ngClass]="item.rating > 0? 'checkedStar':'uncheckedStar'" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+                    <img [ngClass]="item.rating > 1? 'checkedStar':'uncheckedStar'" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+                    <img [ngClass]="item.rating > 2? 'checkedStar':'uncheckedStar'" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+                    <img [ngClass]="item.rating > 3? 'checkedStar':'uncheckedStar'" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+                    <img [ngClass]="item.rating > 4? 'checkedStar':'uncheckedStar'" class="uncheckedStar" src="https://img.icons8.com/color/30/null/filled-star--v1.png"/>
+                </div>
+                <p>ocena:{{item.rating}}</p>
+                <!-- <div class="descriptionBox">
+                    <p class="description">{{item.description}}</p>
+                </div> -->
+                <ng-container *ngIf="item.maxPeople == 0">
+                    <div class="noVacancy">
+                        <img src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/null/external-sold-out-black-friday-cyber-monday-flaticons-flat-flat-icons.png"/>
+    
+                    </div>
+                </ng-container>
+                <div class="deleteBox">
+                    <img src="https://img.icons8.com/ios/100/null/delete-forever--v1.png"
+                    (click)="deleteTrip(item.id)"
+                    />
+                </div>
+            </div>
+        </ng-container>
+        
+        <a routerLink="/newTripForm" routerLinkActive="active" class="cardBox addTrip">
+            <div class="circleBox">
+                <div class="circle">
+                    <p>+</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+    
+</div>

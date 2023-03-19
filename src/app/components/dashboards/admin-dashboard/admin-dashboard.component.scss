@@ -1,0 +1,11 @@
+.info{
+    position: absolute;
+    top: 200px;
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+    .user{
+        width: 300px;
+        border: 1px solid black;
+    }
+}

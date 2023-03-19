@@ -1,0 +1,11 @@
+.uncheckedStar{
+    filter: grayscale(100%);
+}
+
+.uncheckedStar:hover{
+    filter: grayscale(0%);
+}
+
+.checkedStar{
+    filter: grayscale(0%);
+}

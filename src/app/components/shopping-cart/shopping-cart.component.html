@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div class="cartContent">
+        <Header>
+            <h1>Koszyk</h1>
+        </Header>
+        <ul class="tripsList">
+            <ng-container *ngIf="cartArr.length == 0">
+                <p>Koszyk jest pusty</p>
+            </ng-container>
+            
+            <li *ngFor="let item of cartArr">
+                <img src="{{item.img}}" alt="">
+                <div class="side">
+                    <h2>{{item.name}}</h2>
+                    <div class="info">
+                        <p>{{item.destiny}}</p>
+                        <div class="date">
+                            <p>od: {{item.startDate}} do: {{item.endDate}}</p>
+                        </div>
+                        <p>Cena: ${{item.pricePerPerson}}</p>
+                    </div>  
+                    
+                    <div class="BTNs">
+                        <button (click)="buyTrip(item)" class="buyNow">KUP TERAZ</button>
+                        <button (click)="deleteTrip(item)" class="delete">USUŃ</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

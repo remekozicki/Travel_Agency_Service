@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="formBox">
+        <a routerLink="/tripsOffer" routerLinkActive="active" class="close">x</a>
+        <form action="" [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+            
+            <h1>Formularz dodawania wycieczek</h1>
+    
+            <label for="">Nazwa wycieczki</label>
+            <input name="fname" type="text" formControlName="fname">
+    
+            <label for="">Lokalizacja</label>
+            <input name="fdestiny" type="text" formControlName="fdestiny">
+            
+            <label for="">Data rozpoczęcia</label> 
+            <input name="fstartdate" type="date" formControlName="fstartDate">
+            
+            <label for="">Data zakończenia</label> 
+            <input name="fendDate" type="date" formControlName="fendDate">
+            
+            <label for="">Cena za jedno miejsce</label> 
+            <input name="fpricePerPerson" type="text" formControlName="fpricePerPerson">
+            
+            <label for="">Maksymalna ilość uczestników</label> 
+            <input name="fmaxPeople" type="text" formControlName="fmaxPeople">
+            
+            <label for="">Opis wycieczki</label> 
+            <input name="fdescription" type="text" formControlName="fdescription">
+            
+            <label for="">Zdięcie na karcie</label> 
+            <input name="fimg" type="text" formControlName="fimg">
+            
+            <label for="">Zdięcie "see more"</label> 
+            <input name="flink" type="text" formControlName="flink">
+    
+            <button  type="submit" [disabled]="!modelForm.valid">Oddaj wycieczkę</button>
+    
+        </form>
+    </div>
+    
+</div>

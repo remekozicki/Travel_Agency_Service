@@ -1,0 +1,116 @@
+
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.wrapper{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: rgb(0, 153, 255);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    
+
+    h1{
+        color: white;
+        font-family: 'Pacifico', cursive;
+        font-size: 50px;
+    }
+}
+
+.cartContent{
+    display: flex;
+    flex-flow: column;
+    min-height: 200px;
+    width: 90vw;
+    position: relative;
+    top: 200px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 153, 255) ;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    align-items: center;
+    p{
+        margin: 10px;
+        font-size: 18px;
+    }
+    
+    ul{
+        margin: 10px;
+        width: 90vw;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 20px;
+
+    }
+
+    li{
+        position: relative;
+        width: 90%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+
+        img{
+            align-self: center;
+            height: 300px;
+            position: relative;
+            right: 200px;
+            border-radius: 50%;
+            
+
+        }
+        .side{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-evenly;
+
+            h2{
+                color:  rgb(0, 153, 255) ;
+            }
+
+            .BTNs{
+                button{
+                    width: 100px;
+                    height: 50px;
+                }
+                .buyNow{
+                    background-color: rgba(0, 128, 0, 0.5);
+                    border: 1px solid green;
+                }
+                .delete{
+                    background-color: rgba(255, 0, 0, 0.5);
+                    border: 1px solid red;
+                }
+
+                button:hover{
+                    opacity: 70%;
+                }
+            }
+        }
+
+    }
+    
+
+}

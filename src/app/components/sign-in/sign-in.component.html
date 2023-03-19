@@ -1,0 +1,12 @@
+<form action="" [formGroup]="signInForm">
+    <div class="box">
+        <label for="">emali</label>
+        <input type="text" name="email" formControlName="email">
+    </div>
+    <div class="box">
+        <label for="">hasło</label>
+        <input type="text" name="password" formControlName="password">
+    </div>
+    <button [ngClass]="signInForm.valid ? 'buton': 'butonInValid'" (click)="signInUser()" [disabled]="!signInForm.valid" >login</button>
+    <a class="buton" routerLink="/signUp"  routerLinkActive="active">sign up</a>
+</form>

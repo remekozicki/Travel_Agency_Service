@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <div class="historyContent">
+        <header>
+            <h1>Historia</h1>
+        </header>
+        <ul class="historyList">
+            <ng-container *ngIf="historyArr.length == 0">
+                <p>Historia jest pusta</p>
+                <p>{{myDate}}</p>
+            </ng-container>
+
+            <li [ngClass]=" compareDates(item)? 'toBetrip': 'beenTrip'" *ngFor="let item of toDisplayArr">
+                <img src="{{item.link}}" alt="">
+                <div class="info">
+                    <p>{{item.startDate}}</p>
+                    <p>{{myDate}}</p>
+                    <p>{{item.name}}</p>
+                    <p>{{this.historyService.countHistory(item)}}</p>
+
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+</div>

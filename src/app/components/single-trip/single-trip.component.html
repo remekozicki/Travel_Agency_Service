@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="innerWrapper">
+        <header>
+            <h1>{{trip.name}}</h1>
+            <h2>{{trip.destiny}}</h2>
+        </header>
+        <div class="infowrapper">
+            <div class="pictureCarusel">
+                <img src="{{trip.link}}" alt="">
+            </div>
+            <div class="information">
+                <p class="description">{{trip.description}}</p>
+                <p><span>Cena: </span>${{trip.pricePerPerson}}</p>
+        
+                <app-star-rating [tripId]="trip.id" ></app-star-rating>
+                <p><span>Ocena:</span> {{trip.rating}}</p>
+                <p>dostępne miejsca: Wolne miejsca: {{trip.maxPeople - cartService.howManyInCart(trip)}}</p>
+                <div class="BTNs">
+                    <button [disabled]="disablePlus(trip)" (click)="book(trip)">+</button>
+                    <button [disabled]="disableMinus(trip)" (click)="unbook(trip)">-</button>
+                </div>
+                <a routerLink="/tripsOffer" routerLinkActive="active">Powrót do ofert</a>
+    
+            </div>
+    
+    
+        </div>
+        
+    </div>
+    <div class="formBox">
+        <form action="" [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+            <h1>Twoja Opinia</h1>
+            <div class="inputBox">
+                <label for="fopinion">Napisz swoją opinię (minimum 50 znaków)</label>
+                <input class="opinion" name="fopinion" type="text" formControlName="fopinion">
+            </div>
+            <div class="inputBox">
+                <label for="fpurchaseDate">Data wycieczki</label>
+                <input type="date" name="fpurchaseDate" formControlName="fpurchaseDate">
+            </div>
+            <button type="submit" [disabled]="!modelForm.valid">Dodaj opinie</button>
+        </form>
+
+    </div>
+    <div class="opinionsDisplay">
+        <div class="opinionbox" *ngFor="let opinion of opinionsArr">
+            <img src="https://img.icons8.com/pastel-glyph/64/null/user-male-circle.png"/>
+            <p>{{opinion.nick}}</p>
+            <p>Nazwa wycieczki: {{opinion.tripName}}</p>
+            <p>Opinia: {{opinion.opinionContent}}</p>
+            <p>Data odbytej wycieczki:{{opinion.purchaseDate}}</p>
+        </div>
+    </div>
+</div>
